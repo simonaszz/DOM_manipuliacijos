@@ -36,3 +36,17 @@ textarea {
     background-color: #ececec;
     border: 1px solid #bebebe;
 }
+
+#penkioliktas textarea {
+    width: 100%;
+    background-color: white;
+    padding: 1em;
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+}
+#penkioliktas {
+    margin-top: 2em;
+    border: 1px solid #bebebe; /* Assuming similar border for the div */
+    padding: 1em;
+    background-color: white;
+}

@@ -90,3 +90,25 @@ tekstasDivui.oninput = function() {
 function pridetiZodi(elementas, zodis) {
     document.getElementById(elementas).value += zodis + ' ';
 }
+
+// penkioliktas div
+function zodziuKiekis() {
+    let tekstas = document.getElementById('penkiolikto-tekstas').value;
+    let zodziai = tekstas.trim().split(' '); // .trim() to remove leading/trailing spaces, .split() to create array
+    let zodziuKiekis = zodziai.filter(word => word.length > 0).length; // Filter out empty strings from multiple spaces
+
+    document.getElementById('penkiolikto-atsakymai').innerHTML = `<p>Žodžių kiekis: ${zodziuKiekis}</p>`;
+}
+function ilgiausiasZodis() {
+    let tekstas = document.getElementById('penkiolikto-tekstas').value;
+    let zodziai = tekstas.trim().split(' ');
+    let ilgiausias = '';
+
+    for (let zodis of zodziai) {
+        if (zodis.length > ilgiausias.length) {
+            ilgiausias = zodis;
+        }
+    }
+    document.getElementById('penkiolikto-atsakymai').innerHTML += `<p>Ilgiausias žodis: ${ilgiausias}</p>
+    <p>Jo ilgis: ${ilgiausias.length} simbolių.</p>`;
+}
