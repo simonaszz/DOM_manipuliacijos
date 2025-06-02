@@ -60,3 +60,25 @@ function keistiSpalva(elementas, spalva) {
 function keistiDydi(elementas, dydis) {
     document.getElementById(elementas).style.fontSize = dydis + 'px';
 }
+
+
+// tryliktas div
+let divKeitimui = document.getElementById('div-keitimui');
+
+let plocioSlider = document.getElementById('plocio-slider');
+plocioSlider.oninput = function () {
+    divKeitimui.style.width = this.value + 'px';
+}
+
+let auksioSlider = document.getElementById('auksio-slider');
+auksioSlider.oninput = function () {
+    divKeitimui.style.height = this.value + 'px';
+}
+let spalvosPasirinkimas = document.getElementById('spalvos-pasirinkimas');
+spalvosPasirinkimas.oninput = function () {
+    divKeitimui.style.backgroundColor = this.value;
+}
+let tekstasDivui = document.getElementById('tekstas-divui');
+tekstasDivui.oninput = function () {
+    divKeitimui.innerHTML = this.value;
+}
