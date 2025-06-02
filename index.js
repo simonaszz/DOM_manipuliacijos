@@ -40,3 +40,14 @@ document.getElementById("suma").innerHTML = pirmas + " + " + antras + " = " + su
 document.getElementById("skirtumas").innerHTML = pirmas + " - " + antras + " = " + skirtumas;
 document.getElementById("sandauga").innerHTML = pirmas + " * " + antras + " = " + sandauga;
 document.getElementById("dalmuo").innerHTML = pirmas + " / " + antras + " = " + dalmuo;
+
+// vienuoliktas div
+let pirmas = 7;
+let antras = 5;
+
+let isvedimui = `<p>${pirmas} + ${antras} = ${pirmas + antras}</p>
+               <p>${pirmas} - ${antras} = ${pirmas - antras}</p>
+               <p>${pirmas} * ${antras} = ${pirmas * antras}</p>
+               <p>${pirmas} / ${antras} = ${pirmas / antras}</p>`;
+
+document.getElementById('vienuolikto-turinys').innerHTML = isvedimui;
