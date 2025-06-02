@@ -112,3 +112,17 @@ function ilgiausiasZodis() {
     document.getElementById('penkiolikto-atsakymai').innerHTML += `<p>Ilgiausias žodis: ${ilgiausias}</p>
     <p>Jo ilgis: ${ilgiausias.length} simbolių.</p>`;
 }
+
+// sesioliktas div
+let pirmoSkirtukoTurinysElem = document.getElementById('pirmas-skirtukas');
+let antroSkirtukoTurinysElem = document.getElementById('antras-skirtukas');
+
+function pirmoSkirtukoTurinys() {
+    pirmoSkirtukoTurinysElem.style.display = 'block';
+    antroSkirtukoTurinysElem.style.display = 'none';
+}
+
+function antroSkirtukoTurinys() {
+    antroSkirtukoTurinysElem.style.display = 'block';
+    pirmoSkirtukoTurinysElem.style.display = 'none';
+}
