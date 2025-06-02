@@ -1,0 +1,12 @@
+body {
+    background-color: bisque;
+    /* Slightly changed color to match example */
+    padding: 2em;
+    margin: 5em;
+}
+
+body>div {
+    background: white;
+    padding: 2em;
+    margin: 5em;
+}
