@@ -78,3 +78,109 @@ textarea {
     border: 1px dotted grey; /* Add a border for visual separation */
     padding: 1em;
 }
+
+#astuonioliktas #kitas-perjungti-tekstas {
+    display: none; /* Initially hidden */
+}
+#astuonioliktas {
+    margin-top: 2em;
+    border: 1px dotted grey;
+    padding: 1em;
+}
+
+
+
+#papildoma-uzduotis-3 {
+    margin-top: 2em;
+    border: 1px dotted grey;
+    padding: 1em;
+    background-color: #f5f5f5;
+}
+.text-block {
+    border: 1px solid lightgray;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: white;
+}
+/* Style for long paragraphs */
+.highlight-long {
+    background-color: lightblue;
+    color: darkblue;
+    font-weight: bold;
+}
+
+#papildoma-uzduotis-4 {
+    margin-top: 2em;
+    border: 1px dotted grey;
+    padding: 1em;
+    background-color: #f5f5f5;
+}
+#papildoma-uzduotis-4 input {
+    margin-right: 10px;
+    padding: 5px;
+}
+#skaiciavimu-rezultatai {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+
+#papildoma-uzduotis-5 {
+    margin-top: 2em;
+    border: 1px dotted grey;
+    padding: 1em;
+    background-color: #f5f5f5;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Auto margin for older browsers, flexbox handles most centering */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be responsive */
+    max-width: 500px;
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of close button */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close-button {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

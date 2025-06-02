@@ -67,23 +67,28 @@ function keistiDydi(elementas, dydis) {
 let divKeitimui = document.getElementById('div-keitimui');
 
 let plocioSlider = document.getElementById('plocio-slider');
-plocioSlider.oninput = function() {
+plocioSlider.oninput = function () {
     divKeitimui.style.width = this.value + 'px';
 }
 
 let auksioSlider = document.getElementById('aukscio-slider');
-auksioSlider.oninput = function() {
+auksioSlider.oninput = function () {
     divKeitimui.style.height = this.value + 'px';
 }
 
 let spalvosPasirinkimas = document.getElementById('spalvos-pasirinkimas');
-spalvosPasirinkimas.oninput = function() {
+spalvosPasirinkimas.oninput = function () {
     divKeitimui.style.backgroundColor = this.value;
 }
 
 let tekstasDivui = document.getElementById('tekstas-divui');
-tekstasDivui.oninput = function() {
+tekstasDivui.oninput = function () {
     divKeitimui.innerHTML = this.value;
+}
+// tryliktas div (continued)
+let tekstoSpalvosPasirinkimas = document.getElementById('teksto-spalvos-pasirinkimas');
+tekstoSpalvosPasirinkimas.oninput = function () {
+    divKeitimui.style.color = this.value; // Change text color
 }
 
 // keturioliktas div
@@ -92,6 +97,25 @@ function pridetiZodi(elementas, zodis) {
 }
 
 // penkioliktas div
+function trumpiausiasZodis() {
+    let tekstas = document.getElementById('penkiolikto-tekstas').value;
+    let zodziai = tekstas.trim().split(' ').filter(word => word.length > 0);
+
+    if (zodziai.length === 0) {
+        document.getElementById('penkiolikto-atsakymai').innerHTML += `<p>Nėra žodžių.</p>`;
+        return;
+    }
+
+    let trumpiausias = zodziai[0]; // Start with the first word
+
+    for (let i = 1; i < zodziai.length; i++) {
+        if (zodziai[i].length < trumpiausias.length) {
+            trumpiausias = zodziai[i];
+        }
+    }
+    document.getElementById('penkiolikto-atsakymai').innerHTML += `<p>Trumpiausias žodis: ${trumpiausias}</p>
+    <p>Jo ilgis: ${trumpiausias.length} simbolių.</p>`;
+}
 function zodziuKiekis() {
     let tekstas = document.getElementById('penkiolikto-tekstas').value;
     let zodziai = tekstas.trim().split(' '); // .trim() to remove leading/trailing spaces, .split() to create array
@@ -131,12 +155,89 @@ function antroSkirtukoTurinys() {
 let perjungtiMygtukas = document.getElementById('perjungti-mygtukas');
 let perjungtiTekstas = document.getElementById('perjungti-tekstas');
 
-perjungtiMygtukas.onclick = function() {
+perjungtiMygtukas.onclick = function () {
     if (this.innerHTML === "Rodyti") {
         this.innerHTML = "Nerodyti";
         perjungtiTekstas.style.display = "block";
     } else {
         this.innerHTML = "Rodyti";
         perjungtiTekstas.style.display = "none";
+    }
+}
+
+// astuonioliktas div
+let kitasPerjungtiMygtukas = document.getElementById('kitas-perjungti-mygtukas');
+let kitasPerjungtiTekstas = document.getElementById('kitas-perjungti-tekstas');
+
+kitasPerjungtiMygtukas.onclick = function () {
+    if (this.innerHTML === "Rodyti") {
+        this.innerHTML = "Nerodyti";
+        kitasPerjungtiTekstas.style.display = 'block';
+    } else {
+        this.innerHTML = "Rodyti";
+        kitasPerjungtiTekstas.style.display = 'none';
+    }
+}
+
+// devynioliktas div
+let devynioliktoTekstas = document.getElementById('devyniolikto-tekstas');
+devynioliktoTekstas.onclick = function () {
+    this.style.display = 'none';
+}
+
+
+
+// Papildoma užduotis 3
+function styleLongParagraphs() {
+    let textBlocks = document.getElementsByClassName('text-block');
+    for (let i = 0; i < textBlocks.length; i++) {
+        if (textBlocks[i].innerText.length > 100) {
+            textBlocks[i].classList.add('highlight-long');
+        } else {
+            textBlocks[i].classList.remove('highlight-long'); // Remove if it was highlighted before
+        }
+    }
+}
+
+
+// Papildoma užduotis 4
+function atliktiSkaiciavimus() {
+    let skaicius1 = parseFloat(document.getElementById('skaicius1').value);
+    let skaicius2 = parseFloat(document.getElementById('skaicius2').value);
+    let rezultataiDiv = document.getElementById('skaiciavimu-rezultatai');
+
+    if (isNaN(skaicius1) || isNaN(skaicius2)) {
+        rezultataiDiv.innerHTML = '<p style="color: red;">Prašome įvesti galiojančius skaičius.</p>';
+        return;
+    }
+
+    let suma = skaicius1 + skaicius2;
+    let skirtumas = skaicius1 - skaicius2;
+    let sandauga = skaicius1 * skaicius2;
+    let dalmuo = skaicius2 !== 0 ? skaicius1 / skaicius2 : 'Dalyba iš nulio negalima';
+
+    rezultataiDiv.innerHTML = `
+        <p>Suma: ${skaicius1} + ${skaicius2} = ${suma}</p>
+        <p>Skirtumas: ${skaicius1} - ${skaicius2} = ${skirtumas}</p>
+        <p>Sandauga: ${skaicius1} * ${skaicius2} = ${sandauga}</p>
+        <p>Dalmuo: ${skaicius1} / ${skaicius2} = ${dalmuo}</p>
+    `;
+}
+
+// Papildoma užduotis 5
+function toggleModal() {
+    let modal = document.getElementById('myModal');
+    if (modal.style.display === "flex") { // Check current display state
+        modal.style.display = "none";
+    } else {
+        modal.style.display = "flex";
+    }
+}
+
+// Close the modal if user clicks outside of it
+window.onclick = function(event) {
+    let modal = document.getElementById('myModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
 }
