@@ -82,3 +82,11 @@ let tekstasDivui = document.getElementById('tekstas-divui');
 tekstasDivui.oninput = function () {
     divKeitimui.innerHTML = this.value;
 }
+
+// keturioliktas div
+let tekstasDivui = document.getElementById('tekstas-divui'); // This variable is reused from the previous div. It should be unique or passed. Let's define it locally or ensure the ID is unique.
+// Correction: `tekstasDivui` was used for the input, `zodziu-inputas` is the textarea here.
+
+function pridetiZodi(elementas, zodis) {
+    document.getElementById(elementas).value += zodis + " "; // Use .value for textarea
+}

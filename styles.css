@@ -10,22 +10,74 @@ body>div {
     padding: 2em;
     margin: 5em;
 }
+
 #tryliktas .parametrai {
     display: flex;
     margin-bottom: 2em;
 }
 
-#tryliktas .parametras { /* This class is not in the HTML for this section, but based on the screenshot, it should be applied to each parameter group if they were wrapped */
+#tryliktas .parametras {
+    /* This class is not in the HTML for this section, but based on the screenshot, it should be applied to each parameter group if they were wrapped */
     width: 20%;
     padding: 5px 10px;
 }
 
 #div-keitimui {
-    width: 100px; /* Initial width */
-    height: 100px; /* Initial height */
+    width: 100px;
+    /* Initial width */
+    height: 100px;
+    /* Initial height */
     background-color: burlywood;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
+#keturioliktas textarea {
+    width: 100%;
+    /* Based on screenshot */
+    background-color: white;
+    padding: 1em;
+    /* Adjusted to fit the screenshot more closely */
+    border: 1px solid #bebebe;
+    /* From Page 73 */
+}
+
+
+
+
+
+
+#tryliktas .parametrai {
+    display: flex;
+    margin-bottom: 2em;
+    /* The width and padding for individual parameters are not here in the HTML,
+       but if they were wrapped, they would be applied to .parametras */
+}
+
+#div-keitimui {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#keturioliktas {
+    border: 1px solid #bebebe; /* This seems to be the intended style for the div itself */
+    background-color: white; /* Assuming it's white inside for the textarea */
+    padding: 1em; /* To give some space inside */
+    margin-top: 2em; /* To separate from previous div */
+}
+
+#keturioliktas textarea {
+    width: 100%;
+    background-color: white;
+    padding: 1em;
+    border: 1px solid #bebebe;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+/* Buttons in the example seem to have no specific styling here, default will do */
