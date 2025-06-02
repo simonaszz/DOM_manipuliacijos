@@ -18,3 +18,12 @@ console.log('innerText turinys:', document.getElementById('trecias').innerText);
 function pakeisti() {
     document.getElementById('septinto-tekstas').innerHTML = "naujas tekstas";
 }
+// astuntas div
+function pakeisti2(elementas, tekstas) {
+    document.getElementById(elementas).innerHTML = tekstas;
+}
+
+// devintas div
+function kitaSpalva(elementas, spalva) {
+    document.getElementById(elementas).style.color = spalva;
+}
