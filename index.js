@@ -42,8 +42,8 @@ document.getElementById("sandauga").innerHTML = pirmas + " * " + antras + " = " 
 document.getElementById("dalmuo").innerHTML = pirmas + " / " + antras + " = " + dalmuo;
 
 // vienuoliktas div
-let pirmas = 7;
-let antras = 5;
+var pirmas = 7;
+var antras = 5;
 
 let isvedimui = `<p>${pirmas} + ${antras} = ${pirmas + antras}</p>
                <p>${pirmas} - ${antras} = ${pirmas - antras}</p>
@@ -51,3 +51,12 @@ let isvedimui = `<p>${pirmas} + ${antras} = ${pirmas + antras}</p>
                <p>${pirmas} / ${antras} = ${pirmas / antras}</p>`;
 
 document.getElementById('vienuolikto-turinys').innerHTML = isvedimui;
+
+// dvyliktas div
+function keistiSpalva(elementas, spalva) {
+    document.getElementById(elementas).style.color = spalva;
+}
+
+function keistiDydi(elementas, dydis) {
+    document.getElementById(elementas).style.fontSize = dydis + 'px';
+}

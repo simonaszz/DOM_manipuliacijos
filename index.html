@@ -100,6 +100,30 @@
     <div id="vienuoliktas">
       <div id="vienuolikto-turinys"></div>
     </div>
+    <div id="dvyliktas">
+      <p>Spalva:</p>
+      <button onclick="keistiSpalva('dvylikto-tekstas', 'black')">
+        Originali
+      </button>
+      <button onclick="keistiSpalva('dvylikto-tekstas', 'red')">Raudona</button>
+      <button onclick="keistiSpalva('dvylikto-tekstas', 'royalblue')">
+        Mėlyna
+      </button>
+      <button onclick="keistiSpalva('dvylikto-tekstas', 'green')">Žalia</button>
+
+      <p>Teksto dydis:</p>
+      <button onclick="keistiDydi('dvylikto-tekstas', '16')">Originalus</button>
+      <button onclick="keistiDydi('dvylikto-tekstas', '18')">18px</button>
+      <button onclick="keistiDydi('dvylikto-tekstas', '24')">24px</button>
+      <button onclick="keistiDydi('dvylikto-tekstas', '12')">12px</button>
+
+      <p id="dvylikto-tekstas">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+        accusantium adipisci reiciendis aut laudantium! Commodi quod eum libero
+        aliquid ad officiis accusamus id esse corrupti quae assumenda itaque,
+        autem cumque.
+      </p>
+    </div>
 
     <script src="index.js"></script>
   </body>
