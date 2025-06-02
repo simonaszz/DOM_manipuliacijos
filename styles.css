@@ -46,9 +46,6 @@ body>div {
 
 
 
-
-
-
 #tryliktas .parametrai {
     display: flex;
     margin-bottom: 2em;
@@ -81,3 +78,17 @@ body>div {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 /* Buttons in the example seem to have no specific styling here, default will do */
+
+#penkioliktas textarea {
+    width: 100%;
+    background-color: white;
+    padding: 1em;
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+}
+#penkioliktas {
+    margin-top: 2em;
+    border: 1px solid #bebebe; /* Assuming similar border for the div */
+    padding: 1em;
+    background-color: white;
+}
