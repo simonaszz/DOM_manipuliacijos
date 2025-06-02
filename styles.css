@@ -69,3 +69,12 @@ textarea {
 #sesioliktas .skirtukas#antras-skirtukas {
     display: none;
 }
+
+#septynioliktas #perjungti-tekstas {
+    display: none; /* Initially hidden */
+}
+#septynioliktas {
+    margin-top: 2em;
+    border: 1px dotted grey; /* Add a border for visual separation */
+    padding: 1em;
+}

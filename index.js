@@ -126,3 +126,17 @@ function antroSkirtukoTurinys() {
     antroSkirtukoTurinysElem.style.display = 'block';
     pirmoSkirtukoTurinysElem.style.display = 'none';
 }
+
+// septynioliktas div
+let perjungtiMygtukas = document.getElementById('perjungti-mygtukas');
+let perjungtiTekstas = document.getElementById('perjungti-tekstas');
+
+perjungtiMygtukas.onclick = function() {
+    if (this.innerHTML === "Rodyti") {
+        this.innerHTML = "Nerodyti";
+        perjungtiTekstas.style.display = "block";
+    } else {
+        this.innerHTML = "Rodyti";
+        perjungtiTekstas.style.display = "none";
+    }
+}
